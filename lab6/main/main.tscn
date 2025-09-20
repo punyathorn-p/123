@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://bx7lcaeiduoet"]
+
+[ext_resource type="Script" uid="uid://u2l4i4neovdp" path="res://main/main.gd" id="1_pjrb6"]
+[ext_resource type="PackedScene" uid="uid://bmqb2akvwmwy0" path="res://assets/blockman_1.tscn" id="2_c651c"]
+[ext_resource type="PackedScene" uid="uid://b3y2e0jgxo51v" path="res://Scene decoration/Probodobodyne.glb" id="3_xwkvk"]
+[ext_resource type="FontFile" uid="uid://cm2irwkmbk2od" path="res://assets/THSarabun Bold.ttf" id="8_67ri8"]
+
+[node name="main" type="Node3D"]
+script = ExtResource("1_pjrb6")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.984808, -0.00946229, 0.173387, 0.002075, 0.999084, 0.0427376, -0.173633, -0.0417286, 0.983926, 6.07473, 4.60464, 13.5411)
+
+[node name="blockman_1" parent="." instance=ExtResource("2_c651c")]
+transform = Transform3D(0.924874, 0, 1.18093, 1.86265e-09, 1.5, 0, -1.18093, 3.72529e-09, 0.924874, -7.71172, -4.76837e-07, -1.90735e-06)
+
+[node name="blockman_2" parent="." instance=ExtResource("2_c651c")]
+transform = Transform3D(0.924874, 0, 1.18093, 1.86265e-09, 1.5, 0, -1.18093, 3.72529e-09, 0.924874, 0.00792503, -4.76837e-07, -1.90735e-06)
+
+[node name="blockman_3" parent="." instance=ExtResource("2_c651c")]
+transform = Transform3D(0.924874, 0, 1.18093, 1.86265e-09, 1.5, 0, -1.18093, 3.72529e-09, 0.924874, 7.7006, -4.76837e-07, -1.90735e-06)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.969016, -0.246999, -9.16188e-09, 0.23857, -0.935949, 0.259005, -0.0639739, 0.25098, 0.965876, 0, 12.6749, 20.0656)
+
+[node name="Probodobodyne" parent="." instance=ExtResource("3_xwkvk")]
+transform = Transform3D(10, 0, 0, 0, 2, 0, 0, 0, 10, 0, -2, 0)
+
+[node name="Label" type="Label" parent="."]
+offset_right = 196.0
+offset_bottom = 93.0
+theme_override_fonts/font = ExtResource("8_67ri8")
+theme_override_font_sizes/font_size = 25
+text = "
+
+"
